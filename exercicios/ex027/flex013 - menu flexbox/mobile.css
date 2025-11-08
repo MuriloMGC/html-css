@@ -11,3 +11,41 @@ header > h1{
 header> nav > a{
     width: 90vw;
 }
+
+header > nav{
+    display: block;
+}
+
+header nav{
+    flex-flow: column nowrap !important;
+}
+
+
+#burguer{
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    background-color: rgb(72, 71, 71);
+    width: 90vw;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#itens{
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+#itens a {
+    display: block;
+    width: 90vw;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    margin: 3px auto;            /* separação entre os links */
+    border-radius: 5px;
+}

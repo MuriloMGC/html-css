@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Flexbox</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 580px)">
-    <!--<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />-->
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 763px)">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <nav>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <nav id="itens">
             <a href="#">opção 1</a>
             <a href="#">opção 2</a>
             <a href="#">opção 3</a>
@@ -25,5 +26,23 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, laborum quas ipsum culpa obcaecati nulla qui ducimus dolorem explicabo, laboriosam doloribus in sapiente fuga iure suscipit itaque quos voluptas consectetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur consequuntur tenetur odit quod expedita distinctio maxime nesciunt natus doloribus iste, molestias tempora dolores est architecto. At quidem quis iste error.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur neque necessitatibus enim nobis blanditiis excepturi voluptate. Voluptatum est, magnam ea odit ratione nulla autem itaque. Sed aut nihil modi accusamus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aut eveniet rem omnis molestias est repellendus, nihil quos minima recusandae ad eos. Voluptatibus assumenda natus quibusdam sint cum recusandae dolorum?</p>
     </main>
+
+    <script>
+        function clickMenu(){
+          if (itens.style.display == 'block'){
+            itens.style.display = 'none'
+          } else {
+            itens.style.display = 'block'
+          }
+        }
+
+        function mudouTamanho(){
+          if(window.innerWidth >= 763){
+            itens.style.display = 'block'
+          }else{
+            itens.style.display = 'none'
+          }
+        }
+    </script>
 </body>
 </html>
